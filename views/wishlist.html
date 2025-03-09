@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liste de Souhaits - EdenMarket">
+    <title>Ma Liste de Souhaits - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/wishlist-styles.css">
+    <script type="module" src="/scripts/wishlist.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="logo.svg" alt="EdenMarket Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <main class="wishlist-page">
+        <h1>Ma Liste de Souhaits</h1>
+
+        <section class="wishlist-content">
+            <div id="wishlistItems" class="wishlist-items">
+                <!-- Wishlist items will be dynamically loaded -->
+            </div>
+
+            <div class="wishlist-actions">
+                <button id="shareWishlistBtn" class="secondary-btn">
+                    <i class="fas fa-share-alt"></i> Partager ma liste
+                </button>
+                <button id="clearWishlistBtn" class="danger-btn">
+                    <i class="fas fa-trash"></i> Vider la liste
+                </button>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section class="recommended-section">
+            <h2>Produits Recommandés</h2>
+            <div class="products-grid" id="recommendedProductsGrid">
+                <!-- Recommended products will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Partager ma Liste de Souhaits</h2>
+            <div class="share-options">
+                <button class="share-btn" data-platform="whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+                <button class="share-btn" data-platform="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </button>
+                <button class="share-btn" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </button>
+                <button class="share-btn" data-platform="email">
+                    <i class="fas fa-envelope"></i> Email
+                </button>
+            </div>
+            <div class="share-link">
+                <input type="text" id="shareLink" readonly>
+                <button id="copyLinkBtn">Copier le lien</button>
+            </div>
+            <button class="close-modal">&times;</button>
+        </div>
+    </div>
+</body>
+</html>

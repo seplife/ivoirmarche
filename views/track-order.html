@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suivi de Commande - EdenMarket">
+    <title>Suivi de Commande - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/track-styles.css">
+    <script type="module" src="/scripts/track-order.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header tracking-header">
+        <div class="banner">
+            <h1>Suivi de Commande</h1>
+            <p>Suivez l'état de votre commande en temps réel</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="tracking-page">
+        <!-- Tracking Search -->
+        <section class="tracking-search">
+            <div class="search-container">
+                <form id="trackingForm">
+                    <div class="form-group">
+                        <label for="orderNumber">Numéro de Commande</label>
+                        <input type="text" id="orderNumber" required 
+                               placeholder="Ex: ORD-123456789">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email de Commande</label>
+                        <input type="email" id="email" required 
+                               placeholder="Entrez votre email">
+                    </div>
+                    <button type="submit">Suivre ma Commande</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Tracking Results -->
+        <section class="tracking-results" id="trackingResults" style="display: none;">
+            <div class="order-info">
+                <h2>Commande #<span id="displayOrderNumber"></span></h2>
+                <div class="order-details">
+                    <p>Date de commande: <span id="orderDate"></span></p>
+                    <p>Statut de livraison: <span id="deliveryStatus"></span></p>
+                    <p>Date de livraison estimée: <span id="estimatedDelivery"></span></p>
+                </div>
+            </div>
+
+            <!-- Tracking Timeline -->
+            <div class="tracking-timeline">
+                <div class="timeline-steps" id="timelineSteps">
+                    <!-- Steps will be dynamically loaded -->
+                </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="order-items">
+                <h3>Articles de la Commande</h3>
+                <div class="items-list" id="orderItems">
+                    <!-- Items will be dynamically loaded -->
+                </div>
+            </div>
+
+            <!-- Tracking Map -->
+            <div class="tracking-map">
+                <h3>Localisation en Direct</h3>
+                <div id="map" style="height: 300px;">
+                    <!-- Map will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Delivery Contact -->
+            <div class="delivery-contact">
+                <h3>Contact Livreur</h3>
+                <div id="deliveryContactInfo">
+                    <!-- Delivery contact info will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="tracking-support">
+            <h2>Besoin d'Aide ?</h2>
+            <div class="support-options">
+                <div class="support-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Service Client</h3>
+                    <p>+33 (0)1 23 45 67 89</p>
+                    <p>Lun-Ven: 9h-18h</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>support@edenmarket.com</p>
+                    <p>Réponse sous 24h</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chat en Direct</h3>
+                    <p>Support instantané</p>
+                    <button id="startChat">Démarrer le Chat</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

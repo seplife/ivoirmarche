@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Promotions - EdenMarket">
+    <title>Promotions - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/prom-styles.css">
+    <script type="module" src="/scripts/promotions.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html" class="active">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header promotions-header">
+        <div class="banner">
+            <h1>Nos Promotions Exclusives</h1>
+            <p>Profitez de réductions incroyables sur une sélection de produits</p>
+        </div>
+    </header>
+
+    <!-- Promotion Filters -->
+    <section class="promotion-filters" style="margin-top: 1.5rem;">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Pourcentage de Réduction</label>
+                <select id="discount-filter">
+                    <option value="">Toutes les promotions</option>
+                    <option value="10-30">10% - 30%</option>
+                    <option value="30-50">30% - 50%</option>
+                    <option value="50+">50% et plus</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Catégorie</label>
+                <select id="category-filter">
+                    <option value="">Toutes catégories</option>
+                    <option value="tech">Technologie</option>
+                    <option value="fashion">Mode</option>
+                    <option value="beauty">Beauté</option>
+                    <option value="home">Maison</option>
+                    <option value="wellness">Bien-être</option>
+                    <option value="kids">Enfants & Bébés</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="discount-desc">Réduction la plus élevée</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Products Grid -->
+    <main class="promotion-products" style="margin-top: 1.5rem;">
+        <section class="products-grid" id="promotionProductsGrid">
+            <!-- Products will be dynamically loaded -->
+        </section>
+        
+        <div class="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.netlify.app/about.html">À propos</a>
+                <a href="https://ivoirmarche.netlify.app/contact.html">Contact</a>
+                <a href="https://ivoirmarche.netlify.app/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <!-- Modal content will be dynamically loaded -->
+        </div>
+    </div>
+</body>
+</html>

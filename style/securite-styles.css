@@ -1,0 +1,429 @@
+/* Root Variables */
+:root {
+    --primary-color: #ff6600;
+    --secondary-color: #ff9900;
+    --text-color: #333;
+    --background-color: #f8f8f8;
+    --white: #ffffff;
+  }
+  
+  /* Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Navigation */
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5px;
+  overflow-x: auto;
+  padding: 10px 0;
+  }
+  
+  .nav-links a {
+  flex: 0 0 auto;
+  background-color: #ffcc99;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5px;
+  margin-right: 2px;
+  }
+  
+  .nav-links a:hover {
+  transform: scale(1.05);
+  }
+  
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  }
+  
+  .logo img {
+  width: 50px;
+  height: 50px;
+  }
+  
+  .logo h2 {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  }
+  
+  
+/* Navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ffffff ;
+    padding: 15px 30px;
+    color: white;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffcc99;
+    color: var(--text-color);
+  }
+  /* Correction du positionnement du logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    text-align: left; /* Alignement à gauche au lieu du centre */
+  }
+  
+  .logo h2:after {
+    display: none; /* Supprime la barre décorative qui apparaît sous les h2 */
+  }
+  
+  .logo svg {
+    margin-right: 8px;
+  }
+  
+  /* Assurez-vous que les titres h2 dans le logo ne sont pas affectés par le style global des h2 */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 3px;
+  }
+  
+  /* Spécificité CSS pour s'assurer que le style du logo h2 prévaut */
+  .logo h2:after {
+    display: none;
+  }
+  
+  /* Correction pour l'affichage responsive */
+  @media (max-width: 576px) {
+    .logo h2 {
+      display: block; /* Assurez-vous qu'il est visible même sur petit écran */
+      font-size: 1.2rem; /* Taille réduite pour les petits écrans */
+    }
+  }
+  
+/* Sections générales */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid des fonctionnalités */
+.features-grid, .methods-grid, .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.feature-card, .method-card, .certification-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover, .method-card:hover, .certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2em;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+/* Timeline des étapes */
+.steps-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.step-icon {
+    font-size: 2em;
+    color: #ff6600;
+    margin-right: 15px;
+}
+
+/* Support */
+.support-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.support-option {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer nav a {
+    color: #f8f9fa;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 10px;
+    }
+    .nav-links a {
+        display: block;
+        margin: 5px 0;
+    }
+    .support-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: var(--white);
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  .footer-content nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .footer-content nav a:hover {
+    text-decoration: underline;
+  }
+  /* Navigation Actions Buttons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    }
+    
+    .nav-actions button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    background-color: #f5f5f5;
+    }
+    
+    .nav-actions button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 102, 0, 0.3);
+    }
+    
+    .nav-actions button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(255, 102, 0, 0.2);
+    }
+    
+    .nav-actions button i {
+    font-size: 1.2rem;
+    }
+    
+    .nav-actions button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+    z-index: -1;
+    }
+    
+    .nav-actions button:hover::after {
+    opacity: 0.15;
+    transform: scale(1.5);
+    }
+     /* Boutons principaux */
+button {
+  background: linear-gradient(135deg, #ff9900, #ff6b81);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button i {
+  font-size: 18px;
+}
+
+/* Effet au survol */
+button:hover {
+  background: linear-gradient(135deg, #ff6b81, #ff9900);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(255, 105, 135, 0.3);
+}
+
+/* Effet lorsqu'un bouton est actif */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Focus pour accessibilité */
+button:focus {
+  outline: 3px solid rgba(255, 153, 0, 0.6);
+}
+
+/* Style spécifique aux boutons de navigation */
+.nav-actions button {
+  background: transparent;
+  color: #333;
+  border: 1px solid #ff9900;
+  padding: 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.nav-actions button:hover {
+  background: #ff9900;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Bouton du formulaire */
+.tracking-search button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Bouton du chat en direct */
+#startChat {
+  background: #ff6600;
+  color: white;
+}
+
+#startChat:hover {
+  background: #ff9900;
+}

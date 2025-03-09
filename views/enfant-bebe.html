@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enfants & Bébés - EdenMarket">
+    <title>Enfants & Bébés - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/enf-styles.css">
+    <script type="module" src="/scripts/enfant-bebe.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="margin-left: -50px;">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6600"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+            <a href="https://ivoirmarche.com/beaute.html">Beauté</a>
+            <a href="https://ivoirmarche.com/maison.html">Maison</a>
+            <a href="https://ivoirmarche.com/bien-etre.html">Bien-être</a>
+            <a href="https://ivoirmarche.com/enfant-bebe.html" class="active">Enfants & Bébés</a>
+        </div>
+        <div class="nav-actions" style="margin-right: -3rem;">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header enfant-bebe-header">
+        <div class="banner">
+            <h1>Univers Enfants & Bébés</h1>
+            <p>Découvrez notre sélection de produits pour les tout-petits</p>
+        </div>
+    </header>
+
+    <!-- Enfants & Bébés Filters -->
+    <section class="enfant-bebe-filters" style="margin-top: 1.5rem;">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Tranche d'Âge</label>
+                <select id="age-filter">
+                    <option value="">Toutes les tranches</option>
+                    <option value="0-6-months">0-6 mois</option>
+                    <option value="6-12-months">6-12 mois</option>
+                    <option value="1-2-years">1-2 ans</option>
+                    <option value="2-4-years">2-4 ans</option>
+                    <option value="4-6-years">4-6 ans</option>
+                    <option value="6-plus-years">6 ans et plus</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Type de Produit</label>
+                <select id="product-type-filter">
+                    <option value="">Tous les types</option>
+                    <option value="clothing">Vêtements</option>
+                    <option value="toys">Jouets</option>
+                    <option value="nursery">Puériculture</option>
+                    <option value="feeding">Alimentation</option>
+                    <option value="safety">Sécurité</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Prix</label>
+                <select id="price-filter">
+                    <option value="">Tous les prix</option>
+                    <option value="0-20">0 - 20 €</option>
+                    <option value="20-50">20 - 50 €</option>
+                    <option value="50-100">50 - 100 €</option>
+                    <option value="100+">100 € et plus</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="newest">Plus récents</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="popularity">Popularité</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enfants & Bébés Products Grid -->
+    <main class="enfant-bebe-products" style="margin-top: 1.5rem;">
+        <section class="products-grid" id="enfantBebeProductsGrid">
+            <!-- Products will be dynamically loaded -->
+        </section>
+        
+        <div class="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Parenting Trends and Tips -->
+    <section class="parenting-trends">
+        <h2>Conseils & Tendances Parents</h2>
+        <div class="trends-grid">
+            <article class="trend">
+                <img src="https://via.placeholder.com/350x200?text=Éducation+Positive" alt="Éducation Positive">
+                <h3>Éducation Positive</h3>
+                <p>Découvrez des méthodes d'éducation bienveillantes.</p>
+                <a href="#" class="trend-link">Lire l'article</a>
+            </article>
+            <article class="trend">
+                <img src="https://via.placeholder.com/350x200?text=Jeux+Éducatifs" alt="Jeux Éducatifs">
+                <h3>Jeux et Développement</h3>
+                <p>Comment stimuler l'apprentissage par le jeu.</p>
+                <a href="#" class="trend-link">Lire l'article</a>
+            </article>
+            <article class="trend">
+                <img src="https://via.placeholder.com/350x200?text=Alimentation+Saine" alt="Alimentation Saine">
+                <h3>Nutrition Infantile</h3>
+                <p>Conseils pour une alimentation équilibrée.</p>
+                <a href="#" class="trend-link">Lire l'article</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des conseils et offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contact.html">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- Modale pour afficher les détails du produit -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <!-- Image du produit à gauche -->
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <!-- Détails du produit à droite -->
+            <div class="modal-right">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalDescription"></p>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <label for="quantity">Quantité :</label>
+                <select id="quantity" style="width: 50px; height: 30px;">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                </select>
+                <button id="addToCart">Ajouter au panier</button>
+                <button id="buyNow">Acheter cet article</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

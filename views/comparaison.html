@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comparaison de Produits - EdenMarket">
+    <title>Comparaison de Produits - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/compa-styles.css">
+    <script type="module" src="/scripts/comparaison.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="logo.svg" alt="EdenMarket Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="comparison.html" class="active">Comparaison</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <main class="comparison-page">
+        <h1>Comparer les Produits</h1>
+
+        <!-- Product Selection -->
+        <section class="product-selection">
+            <div class="selection-container">
+                <div class="selection-slot">
+                    <button class="add-product-btn" onclick="window.comparisonManager.showProductSelector(0)">
+                        <i class="fas fa-plus"></i>
+                        <span>Ajouter un produit</span>
+                    </button>
+                </div>
+                <div class="selection-slot">
+                    <button class="add-product-btn" onclick="window.comparisonManager.showProductSelector(1)">
+                        <i class="fas fa-plus"></i>
+                        <span>Ajouter un produit</span>
+                    </button>
+                </div>
+                <div class="selection-slot">
+                    <button class="add-product-btn" onclick="window.comparisonManager.showProductSelector(2)">
+                        <i class="fas fa-plus"></i>
+                        <span>Ajouter un produit</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="comparison-table">
+            <table id="comparisonTable">
+                <thead>
+                    <tr>
+                        <th>Caractéristiques</th>
+                        <th>Produit 1</th>
+                        <th>Produit 2</th>
+                        <th>Produit 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Comparison data will be dynamically loaded -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Comparison Actions -->
+        <section class="comparison-actions">
+            <button id="clearComparisonBtn" class="secondary-btn">
+                <i class="fas fa-trash"></i> Effacer la comparaison
+            </button>
+            <button id="shareComparisonBtn" class="primary-btn">
+                <i class="fas fa-share-alt"></i> Partager la comparaison
+            </button>
+        </section>
+    </main>
+
+    <!-- Product Selector Modal -->
+    <div id="productSelectorModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Sélectionner un Produit</h2>
+            <div class="product-search">
+                <input type="text" id="productSearch" placeholder="Rechercher un produit...">
+                <select id="categoryFilter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="tech">Technologie</option>
+                    <option value="fashion">Mode</option>
+                    <option value="beauty">Beauté</option>
+                    <option value="home">Maison</option>
+                    <option value="wellness">Bien-être</option>
+                    <option value="kids">Enfants & Bébés</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productSelectorGrid">
+                <!-- Products will be dynamically loaded -->
+            </div>
+            <button class="close-modal">&times;</button>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Partager la Comparaison</h2>
+            <div class="share-options">
+                <button class="share-btn" data-platform="whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+                <button class="share-btn" data-platform="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </button>
+                <button class="share-btn" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </button>
+                <button class="share-btn" data-platform="email">
+                    <i class="fas fa-envelope"></i> Email
+                </button>
+            </div>
+            <div class="share-link">
+                <input type="text" id="shareLink" readonly>
+                <button id="copyLinkBtn">Copier le lien</button>
+            </div>
+            <button class="close-modal">&times;</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

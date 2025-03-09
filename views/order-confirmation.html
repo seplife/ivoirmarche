@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmation de commande - EdenMarket">
+    <title>Confirmation de commande - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/order-confirmation.css">
+    <script type="module" src="/scripts/order-confirmation.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Order Confirmation Content -->
+    <main class="confirmation-page">
+        <div class="confirmation-container">
+            <div class="confirmation-header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h1>Commande Confirmée</h1>
+                <p>Merci pour votre commande! Un email de confirmation a été envoyé à <span id="customerEmail"></span></p>
+            </div>
+
+            <div class="order-details">
+                <h2>Détails de la commande</h2>
+                <div class="order-info">
+                    <p>Numéro de commande: <span id="orderNumber"></span></p>
+                    <p>Date: <span id="orderDate"></span></p>
+                </div>
+
+                <div class="shipping-info">
+                    <h3>Adresse de livraison</h3>
+                    <div id="shippingAddress"></div>
+                </div>
+
+                <div class="ordered-items">
+                    <h3>Articles commandés</h3>
+                    <div id="orderItems"></div>
+                </div>
+
+                <div class="order-summary">
+                    <div class="summary-line">
+                        <span>Sous-total:</span>
+                        <span id="subtotal"></span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Frais de livraison:</span>
+                        <span id="shipping"></span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total:</span>
+                        <span id="total"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>Prochaines étapes</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Un email de confirmation vous a été envoyé</li>
+                    <li><i class="fas fa-truck"></i> Vous recevrez un email avec le numéro de suivi une fois votre commande expédiée</li>
+                    <li><i class="fas fa-clock"></i> Délai de livraison estimé : 3-5 jours ouvrés</li>
+                </ul>
+            </div>
+
+            <div class="confirmation-actions">
+                <button id="viewOrderBtn" class="primary-btn">Voir ma commande</button>
+                <button id="continueShopping" class="secondary-btn">Continuer mes achats</button>
+            </div>
+        </div>
+
+        <!-- Recommended Products -->
+        <section class="recommended-products">
+            <h2>Vous aimerez aussi</h2>
+            <div class="products-grid" id="recommendedProductsGrid">
+                <!-- Products will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contact.html">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Produits - EdenMarket">
+    <title>Produits - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/products-styles.css">
+    <script type="module" src="/scripts/products.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="logo.svg" alt="EdenMarket Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="products.html" class="active">Produits</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header products-header">
+        <div class="banner">
+            <h1>Nos Produits</h1>
+            <p>Découvrez notre large sélection de produits de qualité</p>
+        </div>
+    </header>
+
+    <!-- Product Filters -->
+    <section class="product-filters">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Catégorie</label>
+                <select id="category-filter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="tech">Technologie</option>
+                    <option value="fashion">Mode</option>
+                    <option value="beauty">Beauté</option>
+                    <option value="home">Maison</option>
+                    <option value="wellness">Bien-être</option>
+                    <option value="kids">Enfants & Bébés</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Marque</label>
+                <select id="brand-filter">
+                    <option value="">Toutes les marques</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="apple">Apple</option>
+                    <option value="nike">Nike</option>
+                    <option value="adidas">Adidas</option>
+                    <option value="loreal">L'Oréal</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Prix</label>
+                <select id="price-filter">
+                    <option value="">Tous les prix</option>
+                    <option value="0-50">0 - 50 €</option>
+                    <option value="50-100">50 - 100 €</option>
+                    <option value="100-200">100 - 200 €</option>
+                    <option value="200+">200 € et plus</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="popular">Popularité</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="newest">Plus récents</option>
+                    <option value="rating">Meilleures notes</option>
+                </select>
+            </div>
+            <div class="filter-group checkboxes">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="instock-filter">
+                    <span class="checkmark"></span>
+                    En stock uniquement
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="promo-filter">
+                    <span class="checkmark"></span>
+                    En promotion
+                </label>
+            </div>
+        </div>
+        <button id="clear-filters" class="clear-filters-btn">
+            <i class="fas fa-times"></i> Réinitialiser les filtres
+        </button>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="products-section">
+        <div class="active-filters" id="activeFilters">
+            <!-- Active filters will be displayed here -->
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically loaded -->
+        </div>
+        <div class="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <div class="page-numbers" id="pageNumbers">
+                <!-- Page numbers will be dynamically generated -->
+            </div>
+            <button id="next-page">Suivant</button>
+        </div>
+        <div class="items-per-page">
+            <label>Produits par page:</label>
+            <select id="items-per-page">
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="48">48</option>
+            </select>
+        </div>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <!-- Quick view content will be dynamically loaded -->
+        </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

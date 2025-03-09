@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Client - EdenMarket">
+    <title>Support Client - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/support-styles.css">
+    <script type="module" src="/scripts/support.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="logo.svg" alt="EdenMarket Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="support.html" class="active">Support</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <main class="support-page">
+        <h1>Support Client</h1>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="action-card" onclick="document.getElementById('ticketModal').style.display='flex'">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Créer un Ticket</h3>
+                <p>Ouvrir une demande de support</p>
+            </div>
+            <div class="action-card" onclick="document.getElementById('chatBox').classList.add('active')">
+                <i class="fas fa-comments"></i>
+                <h3>Chat en Direct</h3>
+                <p>Discuter avec un conseiller</p>
+            </div>
+            <div class="action-card" onclick="location.href='#faq-section'">
+                <i class="fas fa-question-circle"></i>
+                <h3>FAQ</h3>
+                <p>Questions fréquentes</p>
+            </div>
+            <div class="action-card" onclick="location.href='#contact-section'">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Nous Contacter</h3>
+                <p>Coordonnées de contact</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq-section" class="faq-section">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">Tout</button>
+                <button class="category-btn" data-category="orders">Commandes</button>
+                <button class="category-btn" data-category="shipping">Livraison</button>
+                <button class="category-btn" data-category="returns">Retours</button>
+                <button class="category-btn" data-category="payment">Paiement</button>
+            </div>
+            <div class="faq-list" id="faqList">
+                <!-- FAQ items will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- My Tickets Section -->
+        <section class="my-tickets">
+            <h2>Mes Tickets</h2>
+            <div class="tickets-list" id="ticketsList">
+                <!-- Tickets will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="contact-section">
+            <h2>Nous Contacter</h2>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Téléphone</h3>
+                    <p>+225 00 00 00 00</p>
+                    <p class="hours">Lun-Ven: 8h-18h</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>support@edenmarket.com</p>
+                    <p class="hours">Réponse sous 24h</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adresse</h3>
+                    <p>123 Rue du Commerce</p>
+                    <p>Abidjan, Côte d'Ivoire</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chat Box -->
+    <div id="chatBox" class="chat-box">
+        <div class="chat-header">
+            <h3>Chat Support</h3>
+            <button class="minimize-chat" onclick="document.getElementById('chatBox').classList.toggle('active')">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="close-chat" onclick="window.supportManager.closeChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Chat messages will be dynamically loaded -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Tapez votre message...">
+            <button onclick="window.supportManager.sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- New Ticket Modal -->
+    <div id="ticketModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Créer un Nouveau Ticket</h2>
+            <form id="ticketForm">
+                <div class="form-group">
+                    <label>Sujet</label>
+                    <select id="ticketSubject" required>
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="order">Problème de commande</option>
+                        <option value="shipping">Question sur la livraison</option>
+                        <option value="return">Demande de retour</option>
+                        <option value="payment">Problème de paiement</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Numéro de commande (optionnel)</label>
+                    <input type="text" id="orderNumber">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="ticketDescription" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Pièces jointes (optionnel)</label>
+                    <input type="file" id="ticketAttachments" multiple>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">Soumettre</button>
+                    <button type="button" class="secondary-btn" onclick="document.getElementById('ticketModal').style.display='none'">
+                        Annuler
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

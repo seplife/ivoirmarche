@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catégorie Mode - EdenMarket">
+    <title>Mode - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/mode-styles.css">
+    <script type="module" src="/scripts/mode.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+            <a href="https://ivoirmarche.com/mode.html" class="active">Mode</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header mode-header">
+        <div class="banner">
+            <h1>Catégorie Mode</h1>
+            <p>Découvrez les dernières tendances de la mode</p>
+        </div>
+    </header>
+
+    <!-- Mode Filters -->
+    <section class="category-filters" style="margin-top: 1.5rem;">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Prix</label>
+                <select id="price-filter">
+                    <option value="">Tous les prix</option>
+                    <option value="0-50">0 - 50 €</option>
+                    <option value="50-100">50 - 100 €</option>
+                    <option value="100-200">100 - 200 €</option>
+                    <option value="200+">200 € et plus</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sous-Catégorie</label>
+                <select id="subcategory-filter">
+                    <option value="">Toutes les sous-catégories</option>
+                    <option value="femme">Femme</option>
+                    <option value="homme">Homme</option>
+                    <option value="accessoires">Accessoires</option>
+                    <option value="chaussures">Chaussures</option>
+                    <option value="sportswear">Sportswear</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="popularity">Popularité</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="newest">Plus récents</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mode Products Grid -->
+    <main class="mode-products" style="margin-top: 1.5rem;">
+        <section class="products-grid" id="modeProductsGrid">
+            <!-- Products will be dynamically loaded -->
+        </section>
+        
+        <div class="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et découvrez nos dernières tendances mode !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about">À propos</a>
+                <a href="https://ivoirmarche.com/contact">Contact</a>
+                <a href="https://ivoirmarche.com/blog">Blog</a>
+            </nav>
+        </div>
+    </footer>
+     <!-- Modale pour afficher les détails du produit -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <!-- Image du produit à gauche -->
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <!-- Détails du produit à droite -->
+            <div class="modal-right">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalDescription"></p>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <label for="quantity">Quantité :</label>
+                <select id="quantity" style="width: 50px; height: 30px;">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                </select>
+                <button id="addToCart">Ajouter au panier</button>
+                <button id="buyNow">Acheter cet article</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

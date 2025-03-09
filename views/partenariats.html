@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programme Partenaires - EdenMarket">
+    <title>Partenariats - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/partenariats-styles.css">
+    <script type="module" src="/scripts/partenariats.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="partenariats.html" class="active">Partenariats</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header partenariats-header">
+        <div class="banner">
+            <h1>Programme Partenaires</h1>
+            <p>Rejoignez notre réseau et développez votre activité</p>
+        </div>
+    </header>
+
+    <!-- Avantages Partenaires -->
+    <section class="partner-benefits">
+        <h2>Pourquoi devenir partenaire ?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-users"></i>
+                <h3>Audience Large</h3>
+                <p>Accédez à des millions de clients potentiels</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Croissance</h3>
+                <p>Augmentez vos ventes et votre visibilité</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-tools"></i>
+                <h3>Outils Pro</h3>
+                <p>Accès à des outils de gestion performants</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Support Dédié</h3>
+                <p>Une équipe à votre service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types de Partenariats -->
+    <section class="partnership-types">
+        <h2>Nos Types de Partenariats</h2>
+        <div class="types-grid">
+            <div class="type-card" id="vendeur">
+                <h3>Vendeur</h3>
+                <p class="price">Commission de 5%</p>
+                <ul>
+                    <li>Boutique personnalisée</li>
+                    <li>Dashboard analytics</li>
+                    <li>Support prioritaire</li>
+                    <li>Formation gratuite</li>
+                </ul>
+                <button class="apply-btn" data-type="vendeur">Devenir Vendeur</button>
+            </div>
+            <div class="type-card" id="affilie">
+                <h3>Affilié</h3>
+                <p class="price">Jusqu'à 12% de commission</p>
+                <ul>
+                    <li>Liens personnalisés</li>
+                    <li>Suivi des conversions</li>
+                    <li>Paiements mensuels</li>
+                    <li>Matériel marketing</li>
+                </ul>
+                <button class="apply-btn" data-type="affilie">Devenir Affilié</button>
+            </div>
+            <div class="type-card" id="dropshipper">
+                <h3>Dropshipper</h3>
+                <p class="price">Marges personnalisées</p>
+                <ul>
+                    <li>Catalogue produits</li>
+                    <li>Expédition automatisée</li>
+                    <li>API intégrée</li>
+                    <li>Support technique</li>
+                </ul>
+                <button class="apply-btn" data-type="dropshipper">Devenir Dropshipper</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Candidature -->
+    <section class="application-form">
+        <h2>Postuler au Programme Partenaires</h2>
+        <form id="partnershipForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="companyName">Nom de l'entreprise</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="partnerType">Type de partenariat</label>
+                    <select id="partnerType" name="partnerType" required>
+                        <option value="">Sélectionnez un type</option>
+                        <option value="vendeur">Vendeur</option>
+                        <option value="affilie">Affilié</option>
+                        <option value="dropshipper">Dropshipper</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contactName">Nom du contact</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email professionnel</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="website">Site web</label>
+                    <input type="url" id="website" name="website">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="businessType">Type d'activité</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="">Sélectionnez votre activité</option>
+                    <option value="retail">Commerce de détail</option>
+                    <option value="wholesale">Commerce de gros</option>
+                    <option value="manufacturer">Fabricant</option>
+                    <option value="influencer">Influenceur</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">J'accepte les conditions générales du programme partenaires</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer ma candidature</button>
+        </form>
+    </section>
+
+    <!-- Témoignages Partenaires -->
+    <section class="partner-testimonials">
+        <h2>Ils nous font confiance</h2>
+        <div class="testimonials-grid" id="partnerTestimonials">
+            <!-- Testimonials will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- FAQ Partenaires -->
+    <section class="partner-faq">
+        <h2>Questions Fréquentes</h2>
+        <div class="faq-grid" id="partnerFaq">
+            <!-- FAQ items will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="color: white;">&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contact.html">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

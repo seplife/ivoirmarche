@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profil - EdenMarket">
+    <title>Mon Profil - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/profile-styles.css">
+    <script type="module" src="/scripts/profile.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <main class="profile-page">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="profile-avatar">
+                    <img id="userAvatar" src="" alt="Photo de profil">
+                    <button id="changeAvatarBtn" class="secondary-btn">Changer la photo</button>
+                </div>
+                <div class="profile-info">
+                    <h1 id="userName">Nom d'utilisateur</h1>
+                    <p id="userEmail">email@example.com</p>
+                    <button id="editProfileBtn" class="primary-btn">Éditer le profil</button>
+                </div>
+            </section>
+
+            <!-- Profile Navigation -->
+            <nav class="profile-nav">
+                <button class="nav-tab active" data-tab="orders">Mes Commandes</button>
+                <button class="nav-tab" data-tab="info">Informations Personnelles</button>
+                <button class="nav-tab" data-tab="addresses">Adresses</button>
+                <button class="nav-tab" data-tab="security">Sécurité</button>
+            </nav>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Orders Section -->
+                <section id="ordersSection" class="profile-section active">
+                    <h2>Mes Commandes</h2>
+                    <div id="ordersList" class="orders-list">
+                        <!-- Orders will be dynamically loaded -->
+                    </div>
+                </section>
+
+                <!-- Personal Info Section -->
+                <section id="infoSection" class="profile-section">
+                    <h2>Informations Personnelles</h2>
+                    <form id="personalInfoForm" class="info-form">
+                        <div class="form-group">
+                            <label>Prénom</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <button type="submit" class="primary-btn">Sauvegarder</button>
+                    </form>
+                </section>
+
+                <!-- Addresses Section -->
+                <section id="addressesSection" class="profile-section">
+                    <h2>Mes Adresses</h2>
+                    <div id="addressesList" class="addresses-list">
+                        <!-- Addresses will be dynamically loaded -->
+                    </div>
+                    <button id="addAddressBtn" class="secondary-btn">Ajouter une adresse</button>
+                </section>
+
+                <!-- Security Section -->
+                <section id="securitySection" class="profile-section">
+                    <h2>Sécurité du Compte</h2>
+                    <form id="passwordForm" class="security-form">
+                        <div class="form-group">
+                            <label>Ancien mot de passe</label>
+                            <input type="password" id="currentPassword" name="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label>Nouveau mot de passe</label>
+                            <input type="password" id="newPassword" name="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirmer le nouveau mot de passe</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword">
+                        </div>
+                        <button type="submit" class="primary-btn">Changer le mot de passe</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="orderDetailsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Détails de la Commande</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div id="orderDetailsContent">
+                <!-- Order details will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

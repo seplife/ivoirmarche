@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="À propos d'EdenMarket - Notre histoire, notre mission, nos valeurs">
+    <title>À Propos - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/about-styles.css">
+    <script type="module" src="/scripts/about.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2 style="margin-top: 1.5rem;">IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+            <a href="https://ivoirmarche.com/about.html" class="active">À Propos</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header about-header">
+        <div class="banner">
+            <h1>À Propos d'IvoirMarche</h1>
+            <p>Découvrez notre histoire, notre mission et nos engagements</p>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section class="about-story">
+        <div class="container">
+            <h2>Notre Histoire</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Fondée en 2022, IvoirMarche est née de la passion de créer une marketplace innovante qui simplifie et enrichit votre expérience d'achat en ligne.</p>
+                    <p>Notre aventure a commencé avec une vision simple : réunir les meilleurs produits de différentes catégories sous un même toit numérique.</p>
+                </div>
+                <div class="story-image">
+                    <img src="/assets/imagehistorique.png" alt="Histoire d'EdenMarket">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Values -->
+    <section class="about-mission">
+        <div class="container">
+            <h2>Notre Mission</h2>
+            <div class="mission-grid">
+                <div class="mission-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Innovation</h3>
+                    <p>Proposer les produits les plus novateurs et tendance du marché.</p>
+                </div>
+                <div class="mission-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Qualité</h3>
+                    <p>Sélectionner rigoureusement des produits de haute qualité.</p>
+                </div>
+                <div class="mission-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Satisfaction Client</h3>
+                    <p>Mettre le service client au cœur de notre préoccupation.</p>
+                </div>
+                <div class="mission-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Responsabilité</h3>
+                    <p>Promouvoir des produits éco-responsables et durables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="about-team">
+        <div class="container">
+            <h2>Notre Équipe</h2>
+            <div class="team-grid" id="teamMembers">
+                <!-- Team members will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="about-testimonials">
+        <div class="container">
+            <h2>Ce Qu'ils Disent de Nous</h2>
+            <div class="testimonials-grid" id="companyTestimonials">
+                <!-- Testimonials will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="about-cta">
+        <div class="container">
+            <h2>Rejoignez Notre Communauté</h2>
+            <p>Suivez-nous sur les réseaux sociaux et restez informé de nos dernières nouveautés !</p>
+            <div class="social-links">
+                <a href="https://facebook.com/ivoirmarche" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/ivoirmarche" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/ivoirmarche" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/ivoirmarche" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contact.html">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

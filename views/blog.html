@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog EdenMarket - Découvrez nos articles et conseils">
+    <title>Blog - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/blog-styles.css">
+    <script type="module" src="/scripts/blog.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="main-nav">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                    <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                    <text x="10" y="33" fill="white" font-size="20">IM</text>
+                </svg>
+                <h2 style="margin-top: 0.3rem;">IvoirMarche</h2>
+            </div>
+            
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+            <a href="https://ivoirmarche.com/blog.html" class="active">Blog</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header blog-header">
+        <div class="banner">
+            <h1>Le Blog EdenMarket</h1>
+            <p>Inspiration, conseils et découvertes pour tous les passionnés</p>
+        </div>
+    </header>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters" style="margin-top: 1rem;">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Catégorie</label>
+                <select id="category-filter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="tech">Technologie</option>
+                    <option value="mode">Mode</option>
+                    <option value="bien-etre">Bien-être</option>
+                    <option value="maison">Maison</option>
+                    <option value="beaute">Beauté</option>
+                    <option value="enfants">Enfants & Bébés</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="newest">Plus récents</option>
+                    <option value="popular">Les plus populaires</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <main class="blog-posts" style="margin-top: 1rem;">
+        <section class="posts-grid" id="blogPostsGrid">
+            <!-- Blog posts will be dynamically loaded -->
+        </section>
+        
+        <div class="pagination" style="text-align: center;">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Featured/Popular Articles Section -->
+    <section class="featured-articles">
+        <div class="container">
+            <h2>Articles Populaires</h2>
+            <div class="featured-grid" id="featuredArticles">
+                <!-- Featured articles will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez nos derniers articles !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contact.html">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

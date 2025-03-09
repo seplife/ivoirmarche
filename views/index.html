@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EdenMarket - Votre marketplace pour toutes vos envies.">
+    <title>IvoirMarche - Marketplace Innovante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/styles.css">
+    <script type="module" src="/scripts/script.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="banner">
+            <h1>Bienvenue sur IvoirMarche</h1>
+            <p>Découvrez nos offres exclusives et profitez des meilleures promotions.</p>
+            <button class="cta-button">Voir les Offres <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Carrousel des catégories populaires -->
+        <section class="categories-carousel">
+            <h2>Catégories Populaires</h2>
+            <div class="carousel" id="categoriesCarousel">
+                <div class="carousel-item" data-category="tech">
+                    <i class="fas fa-laptop"></i>
+                    <span>Technologie</span>
+                </div>
+                <div class="carousel-item" data-category="fashion">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Mode</span>
+                </div>
+                <div class="carousel-item" data-category="beauty">
+                    <i class="fas fa-heart"></i>
+                    <span>Beauté</span>
+                </div>
+                <div class="carousel-item" data-category="home">
+                    <i class="fas fa-home"></i>
+                    <span>Maison</span>
+                </div>
+                <div class="carousel-item" data-category="wellness">
+                    <i class="fas fa-spa"></i>
+                    <span>Bien-être</span>
+                </div>
+                <div class="carousel-item" data-category="kids">
+                    <i class="fas fa-baby"></i>
+                    <span>Enfants & Bébés</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers -->
+        <section class="best-sellers">
+            <h2>Meilleures Ventes</h2>
+            <div class="products-grid" id="bestSellersGrid">
+                <!-- Products will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Affiliated Products -->
+        <section class="affiliated-products">
+            <h2>Produits Affiliés en Promotion</h2>
+            <div class="products-grid" id="affiliatedProductsGrid">
+                <!-- Affiliated products will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="customer-reviews">
+            <h2>Avis Clients</h2>
+            <div class="reviews" id="reviewsCarousel">
+                <!-- Reviews will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contact.html">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+
+      <!-- Modale pour afficher les détails du produit -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <!-- Image du produit à gauche -->
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <!-- Détails du produit à droite -->
+            <div class="modal-right">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice" style="color:#ff9900;"></p>
+                <p id="modalDescription"></p>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <label for="quantity">Quantité :</label>
+                <select id="quantity" style="width: 50px; height: 30px;">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                </select>
+                <button id="addToCart">Ajouter au panier</button>
+                <button id="buyNow">Acheter cet article</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

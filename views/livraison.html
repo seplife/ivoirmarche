@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Livraison - EdenMarket">
+    <title>Livraison - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/livraison-styles.css">
+    <script type="module" src="/scripts/livraison.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="livraison.html" class="active">Livraison</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header livraison-header">
+        <div class="banner">
+            <h1>Nos Services de Livraison</h1>
+            <p>Rapide, fiable et adaptée à vos besoins</p>
+        </div>
+    </header>
+
+    <!-- Shipping Options -->
+    <section class="shipping-options-section">
+        <div class="container">
+            <h2>Options de Livraison</h2>
+            <div class="options-grid">
+                <div class="shipping-option-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Livraison Standard</h3>
+                    <p class="price">Gratuit dès 100€</p>
+                    <p class="delay">3-5 jours ouvrés</p>
+                    <ul>
+                        <li>Suivi de colis</li>
+                        <li>Livraison à domicile</li>
+                        <li>Notification par SMS</li>
+                    </ul>
+                </div>
+                <div class="shipping-option-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Livraison Express</h3>
+                    <p class="price">9.99€</p>
+                    <p class="delay">24-48h</p>
+                    <ul>
+                        <li>Suivi en temps réel</li>
+                        <li>Livraison prioritaire</li>
+                        <li>Service client dédié</li>
+                    </ul>
+                </div>
+                <div class="shipping-option-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Point Relais</h3>
+                    <p class="price">3.99€</p>
+                    <p class="delay">2-4 jours ouvrés</p>
+                    <ul>
+                        <li>+5000 points relais</li>
+                        <li>15 jours de garde</li>
+                        <li>Horaires flexibles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Map -->
+    <section class="coverage-section">
+        <div class="container">
+            <h2>Zones de Livraison</h2>
+            <div class="coverage-content">
+                <div class="map-container" id="coverageMap">
+                    <!-- Map will be dynamically loaded -->
+                </div>
+                <div class="coverage-info">
+                    <h3>Nos Zones de Livraison</h3>
+                    <div class="zones-list" id="zonesList">
+                        <!-- Zones will be dynamically loaded -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Partners -->
+    <section class="partners-section">
+        <div class="container">
+            <h2>Nos Partenaires de Livraison</h2>
+            <div class="partners-grid" id="shippingPartners">
+                <!-- Partners will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Widget -->
+    <section class="tracking-widget">
+        <div class="container">
+            <h2>Suivre ma Livraison</h2>
+            <div class="tracking-form">
+                <form id="quickTrackForm">
+                    <input type="text" placeholder="Numéro de suivi" required>
+                    <button type="submit">Suivre</button>
+                </form>
+                <p class="tracking-note">Pour un suivi détaillé, visitez notre <a href="track-order.html">page de suivi</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping FAQ -->
+    <section class="shipping-faq">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-grid" id="shippingFaq">
+                <!-- FAQ items will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support -->
+    <section class="support-section">
+        <div class="container">
+            <h2>Besoin d'Aide ?</h2>
+            <div class="support-options">
+                <div class="support-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Téléphone</h3>
+                    <p>+33 (0)1 23 45 67 89</p>
+                    <p>Lun-Ven: 9h-18h</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>livraison@edenmarket.com</p>
+                    <p>Réponse sous 24h</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chat en Direct</h3>
+                    <p>Support instantané</p>
+                    <button id="startChat">Démarrer le Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

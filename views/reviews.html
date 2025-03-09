@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avis Clients - EdenMarket">
+    <title>Avis Clients - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/reviews-styles.css">
+    <script type="module" src="/scripts/reviews.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="logo.svg" alt="EdenMarket Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="reviews.html" class="active">Avis Clients</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <main class="reviews-page">
+        <h1>Avis Clients</h1>
+
+        <!-- Review Filters -->
+        <section class="review-filters">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>Catégorie</label>
+                    <select id="categoryFilter">
+                        <option value="">Toutes les catégories</option>
+                        <option value="tech">Technologie</option>
+                        <option value="fashion">Mode</option>
+                        <option value="beauty">Beauté</option>
+                        <option value="home">Maison</option>
+                        <option value="wellness">Bien-être</option>
+                        <option value="kids">Enfants & Bébés</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Note</label>
+                    <select id="ratingFilter">
+                        <option value="">Toutes les notes</option>
+                        <option value="5">5 étoiles</option>
+                        <option value="4">4 étoiles et plus</option>
+                        <option value="3">3 étoiles et plus</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Trier par</label>
+                    <select id="sortFilter">
+                        <option value="recent">Plus récents</option>
+                        <option value="rating">Note</option>
+                        <option value="helpful">Plus utiles</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Grid -->
+        <section class="reviews-grid" id="reviewsGrid">
+            <!-- Reviews will be dynamically loaded -->
+        </section>
+
+        <!-- Write Review Button -->
+        <div class="write-review-section">
+            <button id="writeReviewBtn" class="primary-btn">
+                <i class="fas fa-pen"></i> Écrire un avis
+            </button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="prevPage" disabled>Précédent</button>
+            <span id="currentPage">Page 1</span>
+            <button id="nextPage">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Écrire un avis</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label>Produit</label>
+                    <select id="productSelect" required>
+                        <!-- Products will be dynamically loaded -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Note</label>
+                    <div class="rating-input">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Titre</label>
+                    <input type="text" id="reviewTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Avis</label>
+                    <textarea id="reviewContent" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Photos (optionnel)</label>
+                    <input type="file" id="reviewPhotos" multiple accept="image/*">
+                </div>
+                <button type="submit" class="submit-btn">Publier l'avis</button>
+                <button type="button" class="close-modal">&times;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services - EdenMarket">
+    <title>Nos Services - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/services-styles.css">
+    <script type="module" src="/scripts/services.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="services.html" class="active">Services</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header services-header">
+        <div class="banner">
+            <h1>Nos Services</h1>
+            <p>Découvrez tous les services proposés par IvoirMarche</p>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+        <div class="service-card" data-service="loyalty">
+            <i class="fas fa-star"></i>
+            <h3>Programme Fidélité</h3>
+            <p>Gagnez des points et profitez de récompenses exclusives.</p>
+            <a href="fidelite.html" class="service-btn">En savoir plus</a>
+        </div>
+
+        <div class="service-card" data-service="delivery">
+            <i class="fas fa-truck"></i>
+            <h3>Services de Livraison</h3>
+            <p>Livraison express et suivi en temps réel.</p>
+            <a href="livraison.html" class="service-btn">En savoir plus</a>
+        </div>
+
+        <div class="service-card" data-service="returns">
+            <i class="fas fa-undo"></i>
+            <h3>Retours Faciles</h3>
+            <p>Retours gratuits sous 14 jours.</p>
+            <a href="retours.html" class="service-btn">En savoir plus</a>
+        </div>
+
+        <div class="service-card" data-service="tracking">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Suivi de Commande</h3>
+            <p>Suivez vos commandes en temps réel.</p>
+            <a href="track-order.html" class="service-btn">En savoir plus</a>
+        </div>
+
+        <div class="service-card" data-service="partnerships">
+            <i class="fas fa-handshake"></i>
+            <h3>Partenariats</h3>
+            <p>Devenez partenaire d'IvoirMarche.</p>
+            <a href="partenariats.html" class="service-btn">En savoir plus</a>
+        </div>
+
+        <div class="service-card" data-service="support">
+            <i class="fas fa-headset"></i>
+            <h3>Support Client</h3>
+            <p>Une équipe dédiée à votre service.</p>
+            <button class="service-btn" id="startChat">Contacter</button>
+        </div>
+    </section>
+
+    <!-- Premium Services -->
+    <section class="premium-services">
+        <h2>Services Premium</h2>
+        <div class="premium-grid">
+            <div class="premium-card">
+                <h3>IvoirMarche Plus</h3>
+                <p class="price">9.99€/mois</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Livraison gratuite illimitée</li>
+                    <li><i class="fas fa-check"></i> Points fidélité x2</li>
+                    <li><i class="fas fa-check"></i> Support prioritaire</li>
+                    <li><i class="fas fa-check"></i> Offres exclusives</li>
+                </ul>
+                <button class="subscribe-btn" data-plan="plus">S'abonner</button>
+            </div>
+
+            <div class="premium-card featured">
+                <div class="badge">Populaire</div>
+                <h3>IvoirMarche Pro</h3>
+                <p class="price">19.99€/mois</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Tous les avantages Plus</li>
+                    <li><i class="fas fa-check"></i> Livraison express gratuite</li>
+                    <li><i class="fas fa-check"></i> Points fidélité x3</li>
+                    <li><i class="fas fa-check"></i> Retours gratuits illimités</li>
+                    <li><i class="fas fa-check"></i> Accès early aux ventes</li>
+                </ul>
+                <button class="subscribe-btn" data-plan="pro">S'abonner</button>
+            </div>
+
+            <div class="premium-card">
+                <h3>IvoirMarche Famille</h3>
+                <p class="price">29.99€/mois</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Tous les avantages Pro</li>
+                    <li><i class="fas fa-check"></i> Jusqu'à 5 comptes</li>
+                    <li><i class="fas fa-check"></i> Points fidélité x4</li>
+                    <li><i class="fas fa-check"></i> Remises famille exclusives</li>
+                </ul>
+                <button class="subscribe-btn" data-plan="family">S'abonner</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="service-testimonials">
+        <h2>Ils Nous Font Confiance</h2>
+        <div class="testimonials-grid" id="testimonials">
+            <!-- Testimonials will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="services-faq">
+        <h2>Questions Fréquentes</h2>
+        <div class="faq-accordion" id="servicesFaq">
+            <!-- FAQ items will be dynamically loaded -->
+        </div>
+        <div class="faq-more">
+            <a href="faq.html" class="more-btn">Voir toutes les questions <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Contact Support -->
+    <section class="support-section">
+        <h2>Besoin d'Aide ?</h2>
+        <div class="support-options">
+            <div class="support-option">
+                <i class="fas fa-phone"></i>
+                <h3>Téléphone</h3>
+                <p>+33 (0)1 23 45 67 89</p>
+                <p>Lun-Ven: 9h-18h</p>
+            </div>
+            <div class="support-option">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>support@ivoirmarche.com</p>
+                <p>Réponse sous 24h</p>
+            </div>
+            <div class="support-option">
+                <i class="fas fa-comments"></i>
+                <h3>Chat en Direct</h3>
+                <p>Support instantané</p>
+                <button id="startSupportChat">Démarrer le Chat</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="color: #fff;">&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a style="color: #ff6600;" href="about.html">À propos</a>
+                <a style="color: #ff6600;" href="contact.html">Contact</a>
+                <a style="color: #ff6600;" href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

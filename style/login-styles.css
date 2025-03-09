@@ -1,0 +1,273 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Navigation Styles */
+.main-nav {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo img {
+    height: 40px;
+}
+
+.main-nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.main-nav .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Login Form Container */
+.auth-page {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.auth-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.form-group input:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+/* Error messages */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Checkbox Styles */
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: 5px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.auth-button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #e68900;
+}
+
+/* Auth Link */
+.auth-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.auth-link a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 10px;
+    }
+
+    .auth-page {
+        padding: 20px;
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    .auth-form {
+        padding: 0 10px;
+    }
+
+    .auth-button {
+        padding: 14px;
+    }
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: var(--white);
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  .footer-content nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .footer-content nav a:hover {
+    text-decoration: underline;
+  }
+   /* Boutons principaux */
+button {
+    background: linear-gradient(135deg, #ff9900, #ff6b81);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  button i {
+    font-size: 18px;
+  }
+  
+  /* Effet au survol */
+  button:hover {
+    background: linear-gradient(135deg, #ff6b81, #ff9900);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(255, 105, 135, 0.3);
+  }
+  
+  /* Effet lorsqu'un bouton est actif */
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Focus pour accessibilité */
+  button:focus {
+    outline: 3px solid rgba(255, 153, 0, 0.6);
+  }
+  
+  /* Style spécifique aux boutons de navigation */
+  .nav-actions button {
+    background: transparent;
+    color: #333;
+    border: 1px solid #ff9900;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .nav-actions button:hover {
+    background: #ff9900;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Bouton du formulaire */
+  .tracking-search button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Bouton du chat en direct */
+  #startChat {
+    background: #ff6600;
+    color: white;
+  }
+  
+  #startChat:hover {
+    background: #ff9900;
+  }
+  

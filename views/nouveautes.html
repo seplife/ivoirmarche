@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nouveautés - EdenMarket">
+    <title>Nouveautés - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/nouv-styles.css">
+    <script type="module" src="/scripts/nouveautes.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html" class="active">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header nouveautes-header">
+        <div class="banner">
+            <h1>Nos Dernières Nouveautés</h1>
+            <p>Découvrez les produits les plus récents et innovants</p>
+        </div>
+    </header>
+
+    <!-- Nouveautes Filters -->
+    <section class="nouveautes-filters" style="margin-top: 1.5rem;">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Date d'Ajout</label>
+                <select id="date-filter">
+                    <option value="">Toutes les dates</option>
+                    <option value="last-week">Dernière semaine</option>
+                    <option value="last-month">Dernier mois</option>
+                    <option value="last-3-months">3 derniers mois</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Catégorie</label>
+                <select id="category-filter">
+                    <option value="">Toutes catégories</option>
+                    <option value="tech">Technologie</option>
+                    <option value="fashion">Mode</option>
+                    <option value="beauty">Beauté</option>
+                    <option value="home">Maison</option>
+                    <option value="wellness">Bien-être</option>
+                    <option value="kids">Enfants & Bébés</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="newest">Plus récents</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouveautes Products Grid -->
+    <main class="nouveautes-products" style="margin-top: 1.5rem;">
+        <section class="products-grid" id="nouveautesProductsGrid">
+            <!-- Products will be dynamically loaded -->
+        </section>
+        
+        <div class="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et découvrez nos dernières nouveautés !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about">À propos</a>
+                <a href="https://ivoirmarche.com/contact">Contact</a>
+                <a href="https://ivoirmarche.com/blog">Blog</a>
+            </nav>
+        </div>
+    </footer>
+     <!-- Modale pour afficher les détails du produit -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <!-- Image du produit à gauche -->
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <!-- Détails du produit à droite -->
+            <div class="modal-right">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalSpecs"></p>
+                <p id="modalDescription"></p>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <label for="quantity">Quantité :</label>
+                <select id="quantity" style="width: 50px; height: 30px;">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                </select>
+                <button id="addToCart">Ajouter au panier</button>
+                <button id="buyNow">Acheter cet article</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

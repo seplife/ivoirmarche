@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beauté - EdenMarket">
+    <title>Beauté - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/beaut-styles.css">
+    <script type="module" src="/scripts/beaute.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+            <a href="https://ivoirmarche.com/beaute.html" class="active">Beauté</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header beaute-header">
+        <div class="banner">
+            <h1>Univers Beauté</h1>
+            <p>Découvrez notre sélection de produits pour votre beauté et bien-être</p>
+        </div>
+    </header>
+
+    <!-- Beauté Filters -->
+    <section class="beaute-filters" style="margin-top: 1.5rem;">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Type de Produit</label>
+                <select id="product-type-filter">
+                    <option value="">Tous les types</option>
+                    <option value="makeup">Maquillage</option>
+                    <option value="skincare">Soins de la peau</option>
+                    <option value="haircare">Soins capillaires</option>
+                    <option value="bodycare">Soins corporels</option>
+                    <option value="parfums">Parfums</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Marque</label>
+                <select id="brand-filter">
+                    <option value="">Toutes les marques</option>
+                    <option value="loreal">L'Oréal</option>
+                    <option value="chanel">Chanel</option>
+                    <option value="clarins">Clarins</option>
+                    <option value="yves-rocher">Yves Rocher</option>
+                    <option value="body-shop">The Body Shop</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Prix</label>
+                <select id="price-filter">
+                    <option value="">Tous les prix</option>
+                    <option value="0-20">0 - 20 €</option>
+                    <option value="20-50">20 - 50 €</option>
+                    <option value="50-100">50 - 100 €</option>
+                    <option value="100+">100 € et plus</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select id="sort-filter">
+                    <option value="newest">Plus récents</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="popularity">Popularité</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beauté Products Grid -->
+    <main class="beaute-products" style="margin-top: 1.5rem;">
+        <section class="products-grid" id="beauteProductsGrid">
+            <!-- Products will be dynamically loaded -->
+        </section>
+        
+        <div class="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Suivant</button>
+        </div>
+    </main>
+
+    <!-- Beauty Trends and Tips -->
+    <section class="beauty-trends">
+        <h2>Tendances et Conseils Beauté</h2>
+        <div class="trends-grid">
+            <article class="trend">
+                <img src="https://via.placeholder.com/350x200?text=Maquillage+Naturel" alt="Maquillage Naturel">
+                <h3>Le Maquillage Naturel</h3>
+                <p>Découvrez les secrets d'un look naturel et élégant.</p>
+                <a href="#" class="trend-link">Lire l'article</a>
+            </article>
+            <article class="trend">
+                <img src="https://via.placeholder.com/350x200?text=Soins+de+Peau" alt="Routine Soins de Peau">
+                <h3>Routine Soins de Peau</h3>
+                <p>Conseils pour une peau éclatante toute l'année.</p>
+                <a href="#" class="trend-link">Lire l'article</a>
+            </article>
+            <article class="trend">
+                <img src="https://via.placeholder.com/350x200?text=Beauté+Bio" alt="Beauté Bio">
+                <h3>Beauté Responsable</h3>
+                <p>Les marques green qui prennent soin de vous et de la planète.</p>
+                <a href="#" class="trend-link">Lire l'article</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des conseils beauté et offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 IvoirMarche. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about.html">À propos</a>
+                <a href="https://ivoirmarche.com/contacthtml">Contact</a>
+                <a href="https://ivoirmarche.com/blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- Modale pour afficher les détails du produit -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <!-- Image du produit à gauche -->
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <!-- Détails du produit à droite -->
+            <div class="modal-right">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalDescription" class="product-description"></p>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <label for="quantity">Quantité :</label>
+                <select id="quantity" style="width: 50px; height: 30px;">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                </select>
+                <button id="addToCart">Ajouter au panier</button>
+                <button id="buyNow">Acheter cet article</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

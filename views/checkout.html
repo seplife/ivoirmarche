@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paiement - EdenMarket">
+    <title>Paiement - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/check-styles.css">
+    <script type="module" src="/scripts/checkout.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="logo.svg" alt="EdenMarket Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Checkout Page -->
+    <main class="checkout-page">
+        <h1>Finaliser la Commande</h1>
+        
+        <!-- Progress Bar -->
+        <div class="checkout-progress">
+            <div class="progress-step active">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Panier</span>
+            </div>
+            <div class="progress-step active">
+                <i class="fas fa-address-card"></i>
+                <span>Informations</span>
+            </div>
+            <div class="progress-step">
+                <i class="fas fa-truck"></i>
+                <span>Livraison</span>
+            </div>
+            <div class="progress-step">
+                <i class="fas fa-credit-card"></i>
+                <span>Paiement</span>
+            </div>
+        </div>
+
+        <div class="checkout-container">
+            <!-- Left Column: Forms -->
+            <div class="checkout-forms">
+                <!-- Shipping Address -->
+                <section class="checkout-section" id="shippingSection">
+                    <h2>Adresse de Livraison</h2>
+                    <form id="shippingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adresse</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="postalCode">Code Postal</label>
+                                <input type="text" id="postalCode" name="postalCode" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ville</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Shipping Method -->
+                <section class="checkout-section" id="deliverySection">
+                    <h2>Mode de Livraison</h2>
+                    <div class="shipping-options">
+                        <div class="shipping-option">
+                            <input type="radio" id="standard" name="shipping" value="standard" checked>
+                            <label for="standard">
+                                <span class="shipping-name">Livraison Standard</span>
+                                <span class="shipping-price">Gratuit</span>
+                                <span class="shipping-time">3-5 jours ouvrés</span>
+                            </label>
+                        </div>
+                        <div class="shipping-option">
+                            <input type="radio" id="express" name="shipping" value="express">
+                            <label for="express">
+                                <span class="shipping-name">Livraison Express</span>
+                                <span class="shipping-price">9.99 €</span>
+                                <span class="shipping-time">1-2 jours ouvrés</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Method -->
+                <section class="checkout-section" id="paymentSection">
+                    <h2>Mode de Paiement</h2>
+                    <form id="paymentForm">
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="card" name="payment" value="card" checked>
+                                <label for="card">
+                                    <i class="fas fa-credit-card"></i>
+                                    Carte Bancaire
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="payment" value="paypal">
+                                <label for="paypal">
+                                    <i class="fab fa-paypal"></i>
+                                    PayPal
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="orangeMoney" name="payment" value="orangeMoney">
+                                <label for="orangeMoney">
+                                    <img src="https://via.placeholder.com/30x30?text=OM" alt="Orange Money" class="mobile-money-icon">
+                                    Orange Money
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="mtnMoney" name="payment" value="mtnMoney">
+                                <label for="mtnMoney">
+                                    <img src="https://via.placeholder.com/30x30?text=MTN" alt="MTN Money" class="mobile-money-icon">
+                                    MTN Money
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="moovMoney" name="payment" value="moovMoney">
+                                <label for="moovMoney">
+                                    <img src="https://via.placeholder.com/30x30?text=Moov" alt="Moov Money" class="mobile-money-icon">
+                                    Moov Money
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="wave" name="payment" value="wave">
+                                <label for="wave">
+                                    <img src="https://via.placeholder.com/30x30?text=Wave" alt="Wave" class="mobile-money-icon">
+                                    Wave
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Details Form -->
+                        <div id="cardDetails" class="payment-details">
+                            <div class="form-group">
+                                <label for="cardNumber">Numéro de Carte</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Date d'Expiration</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/AA">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Money Details Form -->
+                        <div id="mobileMoneyDetails" class="payment-details" style="display: none;">
+                            <div class="form-group">
+                                <label for="phoneNumber">Numéro de Téléphone</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Ex: +225 0123456789">
+                            </div>
+                            <div class="form-group">
+                                <label for="accountName">Nom du Compte</label>
+                                <input type="text" id="accountName" name="accountName" placeholder="Nom tel qu'il apparaît sur votre compte">
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="order-summary">
+                <h2>Récapitulatif de la Commande</h2>
+                <div class="cart-items" id="orderItems">
+                    <!-- Cart items will be dynamically loaded -->
+                </div>
+                <div class="summary-totals">
+                    <div class="summary-line">
+                        <span>Sous-total</span>
+                        <span id="subtotal">0.00 €</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Livraison</span>
+                        <span id="shipping">Gratuit</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span id="total">0.00 €</span>
+                    </div>
+                </div>
+                <button id="placeOrderBtn" class="place-order-btn">
+                    Commander
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

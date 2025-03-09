@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panier - EdenMarket">
+    <title>Panier - IvoirMarche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/pan-styles.css">
+    <script type="module" src="/scripts/panier.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://ivoirmarche.com/index.html">Accueil</a>
+            <a href="https://ivoirmarche.com/categories.html">Catégories</a>
+            <a href="https://ivoirmarche.com/promotions.html">Promotions</a>
+            <a href="https://ivoirmarche.com/nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn active"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header cart-header">
+        <div class="banner">
+            <h1>Votre Panier</h1>
+            <p>Vérifiez et validez vos achats</p>
+        </div>
+    </header>
+
+    <!-- Cart Contents -->
+    <main class="cart-page">
+        <section class="cart-contents">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically loaded -->
+            </div>
+
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <h3>Résumé de la Commande</h3>
+                    <div class="total-breakdown">
+                        <div class="subtotal">
+                            <span>Sous-total</span>
+                            <span id="subtotalValue">0.00 €</span>
+                        </div>
+                        <div class="shipping">
+                            <span>Frais de livraison</span>
+                            <span id="shippingValue">Gratuit</span>
+                        </div>
+                        <div class="total">
+                            <strong>Total</strong>
+                            <strong id="totalValue">0.00 €</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button id="continueShoppingBtn" class="secondary-btn">Continuer mes achats</button>
+                    <button id="proceedToCheckoutBtn" class="primary-btn">Procéder au paiement</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section class="recommended-products">
+            <h2>Produits Recommandés</h2>
+            <div class="products-grid" id="recommendedProductsGrid">
+                <!-- Recommended products will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="https://ivoirmarche.com/about">À propos</a>
+                <a href="https://ivoirmarche.com/contact">Contact</a>
+                <a href="https://ivoirmarche.com/blog">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

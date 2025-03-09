@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programme de Fidélité - EdenMarket">
+    <title>Programme de Fidélité - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/fidelite-styles.css">
+    <script type="module" src="/scripts/fidelite.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="fidelite.html" class="active">Fidélité</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header fidelite-header">
+        <div class="banner">
+            <h1>Programme de Fidélité</h1>
+            <p>Gagnez des points et profitez de récompenses exclusives</p>
+        </div>
+    </header>
+
+    <!-- Points Summary -->
+    <section class="points-summary">
+        <div class="points-card">
+            <h2>Vos Points Fidélité</h2>
+            <div class="points-display">
+                <i class="fas fa-star"></i>
+                <span id="totalPoints">0</span>
+                <span>points</span>
+            </div>
+            <div class="member-status">
+                <h3>Statut: <span id="memberStatus">Bronze</span></h3>
+                <div class="progress-bar">
+                    <div class="progress" id="statusProgress"></div>
+                </div>
+                <p>Plus que <span id="pointsToNext">1000</span> points pour atteindre le niveau suivant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section class="benefits-section">
+        <h2>Avantages du Programme</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-percentage"></i>
+                <h3>Réductions Exclusives</h3>
+                <p>Jusqu'à 20% de réduction sur vos achats</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-gift"></i>
+                <h3>Cadeaux Anniversaire</h3>
+                <p>Un cadeau spécial pour votre anniversaire</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Livraison Gratuite</h3>
+                <p>Livraison offerte dès 50€ d'achat</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-clock"></i>
+                <h3>Ventes Privées</h3>
+                <p>Accès en avant-première aux promotions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rewards Catalog -->
+    <section class="rewards-section">
+        <h2>Catalogue de Récompenses</h2>
+        <div class="rewards-grid" id="rewardsGrid">
+            <!-- Rewards will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- How to Earn Points -->
+    <section class="earn-points-section">
+        <h2>Comment Gagner des Points</h2>
+        <div class="earn-points-grid">
+            <div class="earn-method">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Achats</h3>
+                <p>1€ dépensé = 1 point</p>
+            </div>
+            <div class="earn-method">
+                <i class="fas fa-user-plus"></i>
+                <h3>Parrainage</h3>
+                <p>500 points par filleul inscrit</p>
+            </div>
+            <div class="earn-method">
+                <i class="fas fa-star"></i>
+                <h3>Avis Produits</h3>
+                <p>50 points par avis vérifié</p>
+            </div>
+            <div class="earn-method">
+                <i class="fas fa-birthday-cake"></i>
+                <h3>Anniversaire</h3>
+                <p>200 points bonus</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="history-section">
+        <h2>Historique des Points</h2>
+        <div class="history-table-container">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Transaction</th>
+                        <th>Points</th>
+                        <th>Statut</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionHistory">
+                    <!-- Transaction history will be dynamically loaded -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Referral Program -->
+    <section class="referral-section">
+        <h2>Programme de Parrainage</h2>
+        <div class="referral-content">
+            <p>Parrainez vos amis et gagnez 500 points par filleul inscrit !</p>
+            <div class="referral-link">
+                <input type="text" id="referralLink" readonly>
+                <button id="copyLink">Copier le lien</button>
+            </div>
+            <div class="social-share">
+                <button class="share-btn facebook"><i class="fab fa-facebook"></i> Partager</button>
+                <button class="share-btn twitter"><i class="fab fa-twitter"></i> Tweeter</button>
+                <button class="share-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

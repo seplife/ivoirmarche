@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sécurité des Paiements - EdenMarket">
+    <title>Sécurité des Paiements - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/securite-styles.css">
+    <script type="module" src="/scripts/securite-paiement.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header securite-header">
+        <div class="banner">
+            <h1>Paiement Sécurisé</h1>
+            <p>Vos transactions en toute sécurité</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="security-content">
+        <!-- Security Features -->
+        <section class="security-features">
+            <h2>Nos Mesures de Sécurité</h2>
+            <div class="features-grid" id="securityFeatures">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Protection SSL</h3>
+                    <p>Toutes les données sont cryptées avec un certificat SSL 256-bits</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Conformité PCI DSS</h3>
+                    <p>Normes de sécurité des données de cartes bancaires respectées</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Authentication 3D Secure</h3>
+                    <p>Double vérification pour les paiements par carte</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-fingerprint"></i>
+                    <h3>Détection des Fraudes</h3>
+                    <p>Système anti-fraude avancé en temps réel</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="payment-methods">
+            <h2>Moyens de Paiement Acceptés</h2>
+            <div class="methods-grid">
+                <div class="method-card" data-method="card">
+                    <img src="https://via.placeholder.com/150x80?text=Cartes+Bancaires" alt="Cartes Bancaires">
+                    <h3>Cartes Bancaires</h3>
+                    <p>Visa, Mastercard, CB</p>
+                </div>
+                <div class="method-card" data-method="mobile">
+                    <img src="https://via.placeholder.com/150x80?text=Mobile+Money" alt="Mobile Money">
+                    <h3>Mobile Money</h3>
+                    <p>Orange Money, MTN Money, Moov Money</p>
+                </div>
+                <div class="method-card" data-method="wave">
+                    <img src="https://via.placeholder.com/150x80?text=Wave" alt="Wave">
+                    <h3>Wave</h3>
+                    <p>Paiement mobile Wave</p>
+                </div>
+                <div class="method-card" data-method="paypal">
+                    <img src="https://via.placeholder.com/150x80?text=PayPal" alt="PayPal">
+                    <h3>PayPal</h3>
+                    <p>Paiement sécurisé PayPal</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Steps -->
+        <section class="security-steps">
+            <h2>Comment Nous Protégeons Vos Paiements</h2>
+            <div class="steps-timeline">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>1. Validation du Panier</h3>
+                        <p>Vérification du contenu et du montant total</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>2. Connexion Sécurisée</h3>
+                        <p>Tunnel de paiement crypté SSL</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>3. Vérification</h3>
+                        <p>Authentication 3D Secure</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>4. Confirmation</h3>
+                        <p>Validation et confirmation de paiement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Certifications -->
+        <section class="security-certifications">
+            <h2>Nos Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150x150?text=PCI+DSS" alt="PCI DSS">
+                    <h3>PCI DSS</h3>
+                    <p>Payment Card Industry Data Security Standard</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150x150?text=SSL" alt="SSL">
+                    <h3>SSL</h3>
+                    <p>Secure Sockets Layer Encryption</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150x150?text=3D+Secure" alt="3D Secure">
+                    <h3>3D Secure</h3>
+                    <p>Protocol de Sécurité Supplémentaire</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security FAQ -->
+        <section class="security-faq">
+            <h2>Questions Fréquentes sur la Sécurité</h2>
+            <div class="faq-container" id="securityFaq">
+                <!-- FAQ items will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="support-section">
+            <h2>Besoin d'Aide ?</h2>
+            <div class="support-options">
+                <div class="support-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Téléphone</h3>
+                    <p>+33 (0)1 23 45 67 89</p>
+                    <p>Lun-Ven: 9h-18h</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>securite@edenmarket.com</p>
+                    <p>Réponse sous 24h</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chat en Direct</h3>
+                    <p>Support instantané</p>
+                    <button id="startChat">Démarrer le Chat</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

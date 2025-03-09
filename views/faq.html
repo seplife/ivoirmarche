@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAQ - EdenMarket">
+    <title>FAQ - EdenMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/faq-styles.css">
+    <script type="module" src="/scripts/faq.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path d="M25 2L2 12V38L25 48L48 38V12L25 2Z" fill="#ff9900"/>
+                <path d="M25 2L2 12L25 22L48 12L25 2Z" fill="#ff6b81"/>
+                <text x="10" y="33" fill="white" font-size="20">IM</text>
+            </svg>
+            <h2>IvoirMarche</h2>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="categories.html">Catégories</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="nouveautes.html">Nouveautés</a>
+            <a href="faq.html" class="active">FAQ</a>
+        </div>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+            <button class="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header faq-header">
+        <div class="banner">
+            <h1>Questions Fréquentes</h1>
+            <p>Trouvez rapidement des réponses à vos questions</p>
+        </div>
+    </header>
+
+    <!-- Search FAQ -->
+    <section class="faq-search">
+        <div class="search-container">
+            <input type="text" id="faqSearch" placeholder="Rechercher une question...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-categories">
+        <div class="categories-list">
+            <button class="category-btn active" data-category="all">Toutes les Questions</button>
+            <button class="category-btn" data-category="commandes">Commandes</button>
+            <button class="category-btn" data-category="livraison">Livraison</button>
+            <button class="category-btn" data-category="paiement">Paiement</button>
+            <button class="category-btn" data-category="retours">Retours</button>
+            <button class="category-btn" data-category="compte">Compte</button>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <main class="faq-content">
+        <div class="faq-list" id="faqList">
+            <!-- FAQ items will be dynamically loaded -->
+        </div>
+    </main>
+
+    <!-- Contact Support -->
+    <section class="contact-support">
+        <h2>Vous n'avez pas trouvé votre réponse ?</h2>
+        <p>Notre équipe de support est là pour vous aider</p>
+        <div class="support-options">
+            <a href="contact.html" class="support-option">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>Réponse sous 24h</p>
+            </a>
+            <div class="support-option">
+                <i class="fas fa-phone"></i>
+                <h3>Téléphone</h3>
+                <p>Lun-Ven: 9h-18h</p>
+            </div>
+            <div class="support-option">
+                <i class="fas fa-comments"></i>
+                <h3>Chat en Direct</h3>
+                <p>Réponse immédiate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Restez Informé</h3>
+            <p>Inscrivez-vous à notre newsletter et recevez des offres exclusives !</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 EdenMarket. Tous droits réservés.</p>
+            <nav>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
