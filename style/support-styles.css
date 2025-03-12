@@ -670,3 +670,59 @@ body {
     display: none;
   }
 }
+
+/* Style spécifique aux boutons de navigation */
+.nav-actions button {
+  background: transparent;
+  color: #333;
+  border: 1px solid #ff9900;
+  padding: 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center; /* Aligner les icônes verticalement */
+  gap: 10px; /* Espacement uniforme entre les boutons */
+}
+
+.nav-actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Ajuste selon la taille souhaitée */
+  height: 40px;
+  border: 2px solid orange; /* Bordure orange autour des icônes */
+  border-radius: 50%; /* Forme circulaire */
+  background: transparent;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-actions button:hover {
+  background-color: orange;
+  color: white;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
