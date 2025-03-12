@@ -50,21 +50,21 @@ class ErrorPageManager {
         const popularProducts = [
             {
                 id: 1,
-                name: 'Smartphone Pro',
+                name: 'Portable PC',
                 price: 599.99,
-                image: 'https://via.placeholder.com/200x200?text=Smartphone+Pro'
+                image: '/assets/laptop1.jpg'
             },
             {
                 id: 2,
                 name: 'Écouteurs Sans Fil',
                 price: 129.99,
-                image: 'https://via.placeholder.com/200x200?text=Écouteurs'
+                image: '/assets/casque.avif'
             },
             {
                 id: 3,
                 name: 'Montre Connectée',
                 price: 199.99,
-                image: 'https://via.placeholder.com/200x200?text=Montre'
+                image: '/assets/montre.avif'
             }
         ];
 

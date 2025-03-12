@@ -885,3 +885,22 @@ button:focus {
 #startChat:hover {
   background: #ff9900;
 }
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: var(--white);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-content nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.footer-content nav a:hover {
+  text-decoration: underline;
+}

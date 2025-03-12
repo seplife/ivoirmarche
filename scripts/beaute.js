@@ -263,10 +263,10 @@ const products = [
   { 
     id: 8, 
     name: 'Après-Shampooing Brillance', 
-    price: 22.99, 
+    price: 3.39, 
     brand: 'yves-rocher',
     type: 'haircare', 
-    image: 'https://via.placeholder.com/250x250?text=Après-Shampooing' 
+    image: '/assets/shampoog.jpg' 
   },
   { 
     id: 9, 
